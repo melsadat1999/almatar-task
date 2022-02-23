@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g data-name="vuesax/bulk/tick-circle">
+        <path data-name="Path 465" d="M10 0c10 0 10 0 10 10s0 10-10 10S0 20 0 10 0 0 10 0z" transform="translate(2 2)" style="opacity:.4;fill:#fff"/>
+        <path d="M3.578 7.168a.749.749 0 0 1-.53-.22L.218 4.117a.75.75 0 0 1 1.06-1.06l2.3 2.3L8.718.218a.75.75 0 0 1 1.06 1.06l-5.67 5.67a.749.749 0 0 1-.53.22z" transform="translate(7.002 8.413)" style="fill:#fff"/>
+    </g>
+</svg>

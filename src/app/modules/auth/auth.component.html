@@ -1,0 +1,26 @@
+<div class="flex justify-between  items-center lg:hidden p-5 absolute w-full">
+    <img class=" h-12" src="assets/imgs/logo.png">
+    <fwtr-select fill="clear"></fwtr-select>
+</div>
+<div class=" m-auto">
+    <div class="relative  h-[100vh] ">
+        <div class="absolute lg:w-1/2 right-0   lg:px-28 lg:pt-24  w-full      xl:pb-0 pt-28 p-5">
+            <main [@routeAnimations]="prepareRoute(outlet)">
+                <router-outlet #outlet="outlet"></router-outlet>
+            </main>
+        </div>
+        <div
+            class="bg-[url(assets/imgs/bg-logo.png)] bg-left-bottom  fixed w-1/2 left-0  h-full   lg:block hidden  lg:px-28 lg:pt-40 rounded-tr-2xl rounded-br-2xl    xl:pb-0 bg-no-repeat flex-1 bg-primary ">
+            <h2 class=" text-4xl font-bold text-center text-white">نظام فوترة المحاسبي</h2>
+            <p class=" text-base mt-5 opacity-70 text-center   tracking-[2.2px] text-white ">النظام المحاسبي الأفضل في
+                المملكة العربية السعودية لإصدار
+                الفوتير</p>
+            <ul class=" mt-11">
+                <li class=" flex items-center mb-[18px] xxl:ms-14" *ngFor="let feature of features">
+                    <img class="me-2.5" src="assets/icons/check-box.svg">
+                    <p class=" text-base text-white "> {{feature}} </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

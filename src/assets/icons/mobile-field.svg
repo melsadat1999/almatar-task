@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g data-name="mobile/bulk">
+        <g data-name="vuesax/bulk/mobile">
+            <g data-name="mobile">
+                <path d="M12.24 0H3.76C1 0 0 1 0 3.81v12.38C0 19 1 20 3.76 20h8.47C15 20 16 19 16 16.19V3.81C16 1 15 0 12.24 0z" transform="translate(4 2)" style="opacity:.4;fill:#116780"/>
+                <path data-name="Vector" d="M4.75 1.5h-4A.755.755 0 0 1 0 .75.755.755 0 0 1 .75 0h4a.755.755 0 0 1 .75.75.755.755 0 0 1-.75.75z" transform="translate(9.25 4.75)" style="fill:#116780"/>
+                <path data-name="Vector" d="M3.5 1.75A1.75 1.75 0 1 1 1.75 0 1.75 1.75 0 0 1 3.5 1.75z" transform="translate(10.25 15.8)" style="fill:#116780"/>
+            </g>
+        </g>
+    </g>
+</svg>

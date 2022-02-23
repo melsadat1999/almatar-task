@@ -1,0 +1,11 @@
+ .checkbox-input{
+     input{
+         &:checked{
+             + label{
+                @apply relative bg-secondary after:absolute after:w-[0.35rem] after:h-[0.68rem] after:border-b-2  after:border-r-2 ;
+                @apply after:border-white after:transform after:rotate-45 after:top-[37%] after:left-[48%] after:-translate-x-1/2 after:-translate-y-1/2;
+             }
+         }
+       
+     }
+ }

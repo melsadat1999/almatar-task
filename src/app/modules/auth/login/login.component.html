@@ -1,0 +1,17 @@
+<div
+    class="lg:bg-none bg-[url(assets/imgs/bg-logo-mobile.png)] bg-no-repeat  bg-left-bottom  ">
+    <img class="m-auto hidden lg:block" src="assets/imgs/logo.png">
+    <p class=" text-xl font-bold text-center text-primary mb-11  mt-[30px] ">مرحبا بك , من فضلك سجل دخول لحسابك
+    </p>
+    <field label="البريد الالكتروني" type="email" placeholder="ادخل بريدك الالكتروني"
+        icon="assets/icons/email-field.svg"></field>
+    <field class=" block mt-4" label="ادخل كلمة المرور" type="password" placeholder="ادخل كلمة المرور"
+        icon="assets/icons/password-field.svg"></field>
+    <div class=" flex items-center justify-between mt-6 mb-6">
+        <fwtr-checkbox label="تذكرني"></fwtr-checkbox>
+        <p class=" text-secondary font-semibold cursor-pointer">نسيت كلمة المرور ؟</p>
+    </div>
+    <fwtr-button class=" block mt-[23.5px]" label="تسجيل دخول"></fwtr-button>
+    <p class=" text-center text-base mt-7 mb-8">ليس لديك حساب على فوترة ؟</p>
+    <fwtr-button [routerLink]="['/auth/resignation']" class=" block mt-[23.5px]" fill="outline" label="إنشاء حساب جديد"></fwtr-button>
+</div>

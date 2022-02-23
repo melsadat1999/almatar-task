@@ -1,0 +1,9 @@
+<div class="w-full">
+    <label class=" text-base font-semibold  ">{{label}}</label>
+    <div class=" mt-4 w-full flex border items-center rounded-md   border-[rgba(17,103,128,4%)] bg-[rgba(17,103,128,0.03)]  h-12">
+        <img class="block mx-3" [src]="icon">
+        <input [type]="type" class="bg-[transparent]  text-base font-normal  border-0 focus:outline-0 w-full block"
+            [placeholder]="placeholder">
+        <img class="block mx-3" *ngIf="type == 'password'"  src="assets/icons/eye-field.svg">
+    </div>
+</div>
