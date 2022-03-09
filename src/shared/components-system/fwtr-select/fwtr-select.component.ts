@@ -1,4 +1,6 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { EventValue } from 'src/shared/models/event-value.model';
 import { fade } from './select-animations';
 
 @Component({
@@ -15,21 +17,34 @@ export class FwtrSelectComponent implements OnInit {
   @Input() placeholder: string = '';
   @Input() placeholderSearch: string = '';
   @Input() fill: string = '';
-  @Input() initialValue:string = '';
+  @Input() initialValue: string = '';
+  @Input() search: boolean = false;
+  @Input() items: any = [];
+  @Output() onBlur = new EventEmitter();
+  @Output() onChange = new EventEmitter();
   isOpen: boolean = false;
   idRandomInsideSelect = Math.random().toString(36).replace(/[^a-z]+/g, '');
   idRandom = Math.random().toString(36).replace(/[^a-z]+/g, '');
- 
-  constructor() { }
+  element: any ;
+  constructor(elementRef: ElementRef) {
+    this.element = elementRef.nativeElement;
+  }
 
   ngOnInit(): void {
+  }
+
+
+  changeValue(value:string){
+    this.onChange.emit({target:{nativeElement:this.element,value}});
+    this.isOpen =false;
   }
 
   @HostListener('document:click', ['$event.target']) onClick(event: any) {
     const elementSelect = event.closest(`#${this.idRandomInsideSelect}`)
     if (this.isOpen && !Boolean(elementSelect)) {
       setTimeout(() => {
-        this.isOpen = false
+        this.isOpen = false;
+        this.onBlur.emit(this.element);
       }, 0);
     }
   }
@@ -41,6 +56,6 @@ export class FwtrSelectComponent implements OnInit {
         this.isOpen = !this.isOpen;
       }, 0);
     }
-     
+
   }
 }

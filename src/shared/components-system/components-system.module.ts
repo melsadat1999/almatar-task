@@ -4,6 +4,7 @@ import { FieldComponent } from './field/field.component';
 import { FwtrButtonComponent } from './fwtr-button/fwtr-button.component';
 import { FwtrCheckboxComponent } from './fwtr-checkbox/fwtr-checkbox.component';
 import { FwtrSelectComponent } from './fwtr-select/fwtr-select.component';
+import { DirectivesModule } from '../directives/directives.module';
 
 
 
@@ -15,8 +16,9 @@ import { FwtrSelectComponent } from './fwtr-select/fwtr-select.component';
     FwtrSelectComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    DirectivesModule
   ],
-  exports: [FieldComponent,FwtrButtonComponent,FwtrCheckboxComponent, FwtrSelectComponent]
+  exports: [FieldComponent,FwtrButtonComponent,FwtrCheckboxComponent, FwtrSelectComponent,DirectivesModule]
 })
 export class ComponentsSystemModule { }

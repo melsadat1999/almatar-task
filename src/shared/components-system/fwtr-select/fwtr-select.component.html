@@ -1,25 +1,27 @@
 <div class="w-full lg:relative ">
     <label class=" text-base font-semibold  ">{{label}}</label>
     <div [id]="idRandom"
-        class=" cursor-pointer mt-4 w-full flex border items-center rounded-md   border-[rgba(17,103,128,4%)] bg-[rgba(17,103,128,0.03)]  h-12">
+        class=" cursor-pointer mt-4 w-full flex border items-center rounded-md   border-[rgba(17,103,128,4%)] bg-[rgba(17,103,128,0.03)]  h-12" 
+        >
         <img class="block mx-3" [src]="icon">
-        <p class=" text-gray w-full">{{placeholder}}</p>
-
-        <img class="block mx-3 transition-all  ease-in-out delay-100" [ngClass]='{"transform rotate-180":isOpen}'
+        <p class="  w-full"
+            [ngClass]="{'lg:text-white text-black ': fill == 'language','text-gray':fill != 'language'}">
+            {{placeholder}}</p>
+        <img class="block mx-3 transition-all  ease-in-out delay-100"
+            [ngClass]='{"transform rotate-180":isOpen, "icon-color": fill == "language"}'
             src="assets/icons/arrow-field.svg">
     </div>
-    <div class=" bottom-0 lg:bottom-auto lg:left-auto lg:rounded-none rounded-t-md lg:transform-none left-1/2 -translate-x-1/2 transform lg:absolute fixed z-10 mt-4 w-full bg-[#f2fafa]"
+    <div class=" bottom-0 min-w-[240px] lg:bottom-auto lg:left-0 lg:rounded-none rounded-t-md lg:transform-none left-1/2 -translate-x-1/2 transform lg:absolute fixed z-10 mt-4 w-full bg-[#f2fafa]"
         [id]="idRandomInsideSelect" [@fade] *ngIf="isOpen">
-        <div class=" h-[49.5px] flex items-center ">
+        <div class=" h-[49.5px] flex items-center" *ngIf="search">
             <img class=" ms-5 me-2.5 w-6 h-6" src="assets/icons/search-field.svg">
             <input type="text" [placeholder]="placeholderSearch"
                 class="bg-[transparent]  h-full text-base font-normal   border-0 focus:outline-0 w-full block">
         </div>
         <ul class=" max-h-[300px] overflow-y-auto cursor-pointer bg-white list-items px-5">
-            <li class=" flex py-5 border-b border-[#f5f5f5] last:border-0 hover:bg-[#eee] "
-                *ngFor="let item of [1,2,3,4,5,6,7]">
-                <img src="assets/imgs/saudi-arabia.png">
-                <label class="ms-4 cursor-pointer">المملكة العربية السعودية</label>
+            <li (click)="changeValue(item.id)"  class=" flex py-5 border-b border-[#f5f5f5] last:border-0" *ngFor="let item of items">
+                <img class=" max-w-[30px]" [src]="item.icon">
+                <label class="ms-4 cursor-pointer">{{item.name}}</label>
             </li>
         </ul>
     </div>

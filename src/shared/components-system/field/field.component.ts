@@ -10,6 +10,7 @@ export class FieldComponent implements OnInit {
   @Input() label: string = '';
   @Input() type: string = '';
   @Input() placeholder: string = '';
+  showPassword: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

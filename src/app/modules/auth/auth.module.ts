@@ -6,7 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { ComponentsSystemModule } from 'src/shared/components-system/components-system.module';
 import { AuthComponent } from './auth.component';
 import { ResignationComponent } from './resignation/resignation.component';
- 
+import { DirectivesModule } from 'src/shared/directives/directives.module';
+import { FormsModule } from '@angular/forms';
+  
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ResignationComponent } from './resignation/resignation.component';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ComponentsSystemModule
+    ComponentsSystemModule,
+    FormsModule
   ],
+ 
 })
 export class AuthModule { }

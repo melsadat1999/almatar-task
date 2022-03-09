@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
+ import { MainHeaderComponent } from './main-header/main-header.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
+import { LayoutComponent } from './layout.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    MainHeaderComponent,
+    SideMenuComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [HeaderComponent]
+  
 })
 export class LayoutModule { }
