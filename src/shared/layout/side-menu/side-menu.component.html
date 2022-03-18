@@ -1,1 +1,34 @@
-<p>side-menu works!</p>
+<div class="w-full   bg-primary  h-[100vh]">
+    <div class=" flex p-6 justify-between border-[#1f7088] border-b">
+        <img src="assets/imgs/white-logo.png">
+        <button class="ms-3">
+            <img src="assets/icons/menu.svg">
+        </button>
+    </div>
+    <ul class=" pt-10 px-6">
+        <li class=" w-full cursor-pointer py-5 first:border-0 border-t select-none border-[#1f7088]" *ngFor="let item of menuItems">
+            <!-- [routerLink]="item.path && item.path" -->
+            <div class=" flex justify-between items-center"  (click)="item.active = !item.active">
+                <div class="flex items-center">
+                    <img class="pe-3" [src]="item.icon">
+                    <p class=" text-white ">
+                        {{item.title}}
+                    </p>
+                </div>
+                <img *ngIf="item.children?.length" class=" block" src="assets/icons/arrow-down.svg">
+            </div>
+            <ul *ngIf="item.children?.length && item.active" >
+                <li *ngFor="let child of item.children"  routerLink="{{child.path}}" routerLinkActive="active-child" class=" w-full cursor-pointer py-5 ps-10 first:border-0 border-t border-[#1f7088]">
+                    <div class="flex items-center justify-between">
+                        <p class=" text-white opacity-60">
+                            {{child.title}}
+                        </p>
+                        <i  class=" invisible w-6 h-6 after:w-2 after:h-2 after:-translate-x-1/3 after:-translate-y-1/2  after:absolute after:top-1/2 after:left-1/2 
+                        after:border-e-2 after:border-t-2 after:border-[#d1c730] after:transform after:rotate-[316deg]  relative bg-[rgb(191,199,51,60%)] rounded-full ">
+                        </i>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

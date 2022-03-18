@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g data-name="chart-square/bulk">
+        <g data-name="vuesax/bulk/chart-square">
+            <path data-name="Vector" d="M14.18 0H5.81C2.17 0 0 2.17 0 5.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V5.81c0-3.64-2.17-5.81-5.81-5.81z" transform="translate(2.01 2)" style="opacity:.4;fill:#fff"/>
+            <path data-name="Vector" d="M3.79 0H1.14A1.139 1.139 0 0 0 0 1.14v5.12h3.79V0z" transform="translate(6.32 11.15)" style="fill:#fff"/>
+            <path data-name="Vector" d="M2.66 0H1.14A1.139 1.139 0 0 0 0 1.14v9.66h3.79V1.14A1.131 1.131 0 0 0 2.66 0z" transform="translate(10.1 6.6)" style="opacity:.4;fill:#fff"/>
+            <path data-name="Vector" d="M2.65 0H0v4.55h3.79V1.14A1.153 1.153 0 0 0 2.65 0z" transform="translate(13.9 12.85)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>

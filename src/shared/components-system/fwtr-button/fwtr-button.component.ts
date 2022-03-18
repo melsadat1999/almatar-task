@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FwtrButtonComponent implements OnInit {
   @Input() fill: string = '';
   @Input() label: string = '';
+  @Input() icon: string = '';
   constructor() { }
 
   ngOnInit(): void {

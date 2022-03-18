@@ -1,0 +1,14 @@
+::ng-deep{
+    main-header{
+        fwtr-select{
+            .cursor-pointer {
+                > p{
+                    @apply text-black
+                }
+                .icon-color{
+                    filter:none
+                }
+            }
+        }
+    }
+}

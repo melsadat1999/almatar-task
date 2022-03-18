@@ -11,7 +11,9 @@
       gray:'#9D9D9D',
       white:"#fff",
       secondary:"#21a6a1",
-      black:"#000"
+      black:"#000",
+      danger:'#f35050',
+      main:"#fbfbfb;"
     },
     extend: {
       screens:{

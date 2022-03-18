@@ -1,1 +1,9 @@
-<p>layout works!</p>
+<main class= "">
+    <div  class=" flex overflow-hidden " >
+        <side-menu class="fixed shrink-0 block w-[285px] "></side-menu>
+        <div class="px-5 ltr:ml-[285px] rtl:mr-[285px] bg-main lg:px-10 w-full overflow-y-auto">
+            <main-header class="order-1 w-full"> </main-header>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</main>

@@ -1,8 +1,10 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
- import { MainHeaderComponent } from './main-header/main-header.component';
+import { MainHeaderComponent } from './main-header/main-header.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { LayoutComponent } from './layout.component';
+import { ComponentsSystemModule } from '../components-system/components-system.module';
 
 
 
@@ -13,8 +15,14 @@ import { LayoutComponent } from './layout.component';
     LayoutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    ComponentsSystemModule
   ],
-  
+  exports:[
+    MainHeaderComponent,
+    SideMenuComponent,
+    LayoutComponent
+  ]
 })
 export class LayoutModule { }
