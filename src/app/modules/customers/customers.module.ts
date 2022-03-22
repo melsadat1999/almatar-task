@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { AddEditCustomerComponent } from './add-edit-customer/add-edit-customer.component';
+import { FwtrTableModule } from 'src/shared/components-system/fwtr-table/fwtr-table.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { AddEditCustomerComponent } from './add-edit-customer/add-edit-customer.
   imports: [
     CommonModule,
     CustomersRoutingModule,
-    ComponentsSystemModule
+    ComponentsSystemModule,
+    FwtrTableModule
   ]
 })
 export class CustomersModule { }

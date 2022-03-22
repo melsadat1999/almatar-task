@@ -1,9 +1,48 @@
-<div class=" flex  items-center justify-between">
+<div class=" flex  items-center justify-between ">
     <div class=" pt-10">
         <h2 class=" font-bold text-2xl">كل العملاء</h2>
         <p class=" text-gray text-base mt-2.5"> قائمة بكل العملاء الموجودين في النظام</p>
     </div>
-    <div>
- 
-    </div>
+
+</div>
+<div class=" mt-11">
+    <fwtr-table>
+        <tr table-head class="h-[80px]">
+            <th class="text-primary font-bold text-end px-6">ID</th>
+            <th class="text-primary font-bold text-end px-6">اسم العميل</th>
+            <th class="text-primary font-bold text-end px-6">نوع العميل</th>
+            <th class="text-primary font-bold text-end px-6">تاريخ الانضمام</th>
+            <th class="text-primary font-bold text-end px-6">جنسية العميل</th>
+            <th class="text-primary font-bold text-end px-6">تفعيل / إيقاف</th>
+            <th class="text-primary font-bold text-end px-6">اجراءات</th>
+        </tr>
+        <tr table-data class="h-[80px] bg-white  border-t-[10px] border-main rounded">
+            <td class="px-6">101</td>
+            <td class="px-6">عبدالكريم حمدان</td>
+            <td class="px-6">
+                <div
+                    class="w-[60px] flex justify-center items-center text-secondary rounded h-[30px] border border-secondary">
+                    فرد
+                </div>
+            </td>
+            <td class="px-6">24/2/2022</td>
+            <td class="px-6">السعودية</td>
+            <td class="px-6">
+                <switch></switch>
+            </td>
+            <td class="px-6  ">
+                <div class="flex items-center">
+                    <button class=" me-5">
+                        <img src="assets/icons/edit.svg" alt="edit">
+                    </button>
+                    <button>
+                        <img src="assets/icons/delete.svg" alt="edit">
+                    </button>
+                </div>
+
+            </td>
+        </tr>
+
+
+    </fwtr-table>
 </div>

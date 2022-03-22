@@ -1,0 +1,11 @@
+/* Toggle B */
+input:checked ~ .dot {
+    transform: translateX(100%);
+    left: 0;
+  }
+  input:checked ~ .overlay{
+      @apply bg-primary;
+}
+  .dot{
+    box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1);
+  }
