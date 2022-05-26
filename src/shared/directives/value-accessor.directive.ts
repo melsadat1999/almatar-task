@@ -14,8 +14,7 @@ export class ValueAccessorDirective implements ControlValueAccessor, AfterViewIn
   }
 
   writeValue(value: string): void {
-    console.log(this.el.nativeElement.querySelector('input'))
-    this.el.nativeElement.value = this.lastValue = value == null ? '' : value;
+     this.el.nativeElement.value = this.lastValue = value == null ? '' : value;
     this.el.nativeElement.querySelector('input,textarea,app-select').value = this.lastValue = value == null ? '' : value;
   }
 
