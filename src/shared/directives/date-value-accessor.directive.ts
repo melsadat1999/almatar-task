@@ -4,23 +4,23 @@ import { ValueAccessorDirective } from './value-accessor.directive';
 
 @Directive(
   {
-    selector: 'app-select',
+    selector: 'app-datepicker',
     providers: [
       {
         provide: NG_VALUE_ACCESSOR,
-        useExisting: SelectValueAccessorDirective,
+        useExisting: DateValueAccessorDirective,
         multi: true
       },
     ],
   }
   )
-export class SelectValueAccessorDirective extends ValueAccessorDirective {
+export class DateValueAccessorDirective extends ValueAccessorDirective {
 
   constructor(injector: Injector, el: ElementRef) {
     super(injector, el);
   }
   
-  @HostListener('onChange', ['$event.target'])
+  @HostListener('valueChange', ['$event.target'])
   _handleChangeEvent(el: any): void {
     this.handleChangeEvent(el.nativeElement, el.value);
   }

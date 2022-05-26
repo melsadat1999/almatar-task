@@ -4,9 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BrowserDbService {
-
-
-
   setItem(key: string, value: any) {
     return localStorage.setItem(key, JSON.stringify(value))
   }

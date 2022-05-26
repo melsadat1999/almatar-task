@@ -14,22 +14,22 @@ export class SideMenuComponent implements OnInit {
     {
       path: '/is',
       icon: 'assets/icons/statics.svg',
-      title: 'الإحصائيات'
+      title: 'Home'
     },
     {
       path: '/customers',
       icon: 'assets/icons/clients.svg',
       active: false,
-      title: 'العملاء',
+      title: 'Groups',
       children: [
         {
           active: false,
-          title: 'كل العملاء',
-          path: '/customers/list',
+          title: 'Group 1',
+          path: '#',
         },
         {
-          title: 'عميل جديد',
-          path: '/customers/add',
+          title: 'Group 2',
+          path: '#',
         }
       ]
     }

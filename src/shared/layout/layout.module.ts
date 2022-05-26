@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { LayoutComponent } from './layout.component';
-import { ComponentsSystemModule } from '../components-system/components-system.module';
-
+ 
 
 
 @NgModule({
@@ -17,8 +16,7 @@ import { ComponentsSystemModule } from '../components-system/components-system.m
   imports: [
     CommonModule,
     RouterModule,
-    ComponentsSystemModule
-  ],
+   ],
   exports:[
     MainHeaderComponent,
     SideMenuComponent,

@@ -1,0 +1,40 @@
+<div class="container-page h-[100vh]">
+  <div class="p-7">
+    <div class="p-4 bg-white">
+      <div class=" flex justify-between">
+        <h3 class=" font-bold">Add new task</h3>
+        <button routerLink="/tasks/todo-list"
+          class="flex cursor-pointer items-center px-3 mb-3 text-sm h-[36px] rounded-md text-white bg-[#183c5b]">
+          Back
+        </button>
+      </div>
+      <ng-container [formGroup]="taskForm">
+        <div class="  flex items-center">
+          <field label="Title" formControlName="title"   placeholder="Enter title" class="block me-9"></field>
+          <field label="Group name"  formControlName="group" placeholder="Enter group name" class="block me-9"></field>
+          <app-datepicker  formControlName="date" class="block me-9"></app-datepicker>
+        </div>
+
+        <div class="mt-4">
+          <text-area label="Description"  formControlName="description" placeholder="Enter description" class="block me-9"></text-area>
+        </div>
+
+        <div class="mt-4 flex">
+          <button  (click)="addTask()"  [disabled]="taskForm.invalid" [ngClass]="{'opacity-60':taskForm.invalid}" 
+            class="flex cursor-pointer items-center px-3 me-3 mb-3 text-sm h-[36px] rounded-md text-white bg-[#183c5b]">
+            Save task
+          </button>
+          <button (click)="clear()" 
+            class="flex cursor-pointer items-center px-3 mb-3 text-sm h-[36px] rounded-md text-white bg-[#183c5b]">
+            Clear fields
+          </button>
+        </div>
+      </ng-container>
+      
+
+
+  
+    </div>
+
+  </div>
+</div>

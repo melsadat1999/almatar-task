@@ -8,9 +8,10 @@
   theme: {
     colors: {
       primary:"#116780",
-      gray:'#9D9D9D',
+
+      gray:'#949494',
       white:"#fff",
-      secondary:"#21a6a1",
+      secondary:"#4d708e",
       black:"#000",
       danger:'#f35050',
       main:"#fbfbfb;"
@@ -30,6 +31,7 @@
   //    },
   plugins: [
     require('tailwindcss-rtl'),
+    require('@tailwindcss/forms')
   ],
 }
 

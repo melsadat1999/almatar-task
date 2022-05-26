@@ -14,7 +14,9 @@ export class ValueAccessorDirective implements ControlValueAccessor, AfterViewIn
   }
 
   writeValue(value: string): void {
+    console.log(this.el.nativeElement.querySelector('input'))
     this.el.nativeElement.value = this.lastValue = value == null ? '' : value;
+    this.el.nativeElement.querySelector('input,textarea,app-select').value = this.lastValue = value == null ? '' : value;
   }
 
   registerOnChange(fn: any): void {
@@ -34,6 +36,7 @@ export class ValueAccessorDirective implements ControlValueAccessor, AfterViewIn
       if (value !== this.lastValue) {
         this.lastValue = value;
         this.onChange(value);
+        this.writeValue(value);
       }
     }
   }
